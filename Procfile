@@ -1,1 +1,1 @@
-web: stroke prediction:app
+web: gunicorn script:app
