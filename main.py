@@ -5,14 +5,11 @@ import pandas as pd
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 app = Flask(__name__)
-cors = CORS(app)
-app.config['CORS_HEADERS'] = 'Content-Type'
+CORS(app)
 
 stroke_predict = prediction()
 
-
 @app.route('/predict', methods=['POST'])
-@cross_origin()
 def predict():
     input_data = request.json
     input_df = pd.DataFrame.from_dict([input_data])
