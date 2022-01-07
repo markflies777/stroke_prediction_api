@@ -5,7 +5,8 @@ import pandas as pd
 from http.server import HTTPServer, SimpleHTTPRequestHandler
 
 app = Flask(__name__)
-CORS(app)
+cors = CORS(app)
+app.config['CORS_HEADERS'] = 'Content-Type'
 
 stroke_predict = prediction()
 
