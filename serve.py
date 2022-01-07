@@ -14,16 +14,16 @@ def prediction():
                                    'Urban': 1}, inplace=True)
 
         df.work_type.replace({'Private': 0,
-                              'Self-employed': 1,
-                              'Govt_job': 2,
-                              'children': 3,
-                              'Never_worked': 4},
+                              'SelfEmployed': 1,
+                              'GovtJob': 2,
+                              'Children': 3,
+                              'NeverWorked': 4},
                              inplace=True)
 
-        df.smoking_status.replace({'never smoked': 0,
+        df.smoking_status.replace({'NeverSmoked': 0,
                                    'Unknown': 1,
-                                   'formerly smoked': 2,
-                                   'smokes': 3}, inplace=True)
+                                   'FormerlySmoked': 2,
+                                   'Smokes': 3}, inplace=True)
 
         df.ever_married.replace({'Yes': 1, 'No': 0}, inplace=True)
 
@@ -33,3 +33,4 @@ def prediction():
         return result
 
     return stroke_predictor
+
